@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Malek Nouar – Développeur full stack</title>
+    <!-- Meta description for SEO -->
+    <meta
+      name="description"
+      content="Portfolio de Malek Nouar, développeur full stack spécialisé en Python, C#, Angular, CI/CD et Docker. Découvrez son parcours, ses compétences et ses projets."
+    />
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Import Inter for body text and Great Vibes for the signature name -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* Base styles */
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      /* Hide the mobile menu by default */
+      #mobileMenu {
+        display: none;
+      }
+      /* Smooth transitions for reveal animations */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Custom signature font for the brand name */
+      .font-signature {
+        font-family: 'Great Vibes', cursive;
+        letter-spacing: 1px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200"
+  >
+    <!-- Navigation -->
+    <header class="fixed w-full z-40 bg-transparent">
+      <!-- A rounded navigation bar with a pronounced backdrop and gradient border -->
+      <nav
+        class="max-w-7xl mx-auto mt-4 px-6 py-3 bg-gray-900/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-full shadow-xl ring-2 ring-purple-500/30"
+      >
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center space-x-3">
+            <!-- Logo monogramme MN -->
+            <img src="images/logos/logo_mn.png" alt="Logo MN" class="h-8 w-8" />
+            <!-- Nom simple et professionnel -->
+            <a
+              href="#home"
+              class="text-2xl md:text-3xl font-semibold text-gray-200 dark:text-gray-100 tracking-wide hover:text-purple-400 transition-colors"
+              >Malek&nbsp;Nouar</a
+            >
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <!-- Navigation links with icons for a richer appearance -->
+              <a
+                href="#home"
+                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
+              >
+                <img src="images/icons/home.svg" alt="Accueil" class="h-5 w-5 dark:invert" />
+                <span>Accueil</span>
+              </a>
+              <a
+                href="#about"
+                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
+              >
+                <img src="images/icons/user.svg" alt="À propos" class="h-5 w-5 dark:invert" />
+                <span>À propos</span>
+              </a>
+              <a
+                href="#skills"
+                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
+              >
+                <img src="images/icons/code.svg" alt="Compétences" class="h-5 w-5 dark:invert" />
+                <span>Compétences</span>
+              </a>
+              <a
+                href="#experience"
+                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
+              >
+                <img src="images/icons/briefcase.svg" alt="Expériences" class="h-5 w-5 dark:invert" />
+                <span>Expériences</span>
+              </a>
+              <a
+                href="#projects"
+                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
+              >
+                <img src="images/icons/folder.svg" alt="Projets" class="h-5 w-5 dark:invert" />
+                <span>Projets</span>
+              </a>
+              <a
+                href="#downloads"
+                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
+              >
+                <img src="images/icons/download.svg" alt="Téléchargements" class="h-5 w-5 dark:invert" />
+                <span>Téléchargements</span>
+              </a>
+              <a
+                href="#contact"
+                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
+              >
+                <img src="images/icons/contact.svg" alt="Contact" class="h-5 w-5 dark:invert" />
+                <span>Contact</span>
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center space-x-4">
+            <!-- Dark mode toggle -->
+            <button
+              id="themeToggle"
+              class="text-xl p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800"
+              aria-label="Toggle dark mode"
+            >
+              <i class="far fa-moon" id="themeIcon"></i>
+            </button>
+            <!-- Mobile menu button -->
+            <button
+              id="mobileMenuButton"
+              class="md:hidden text-2xl p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800"
+              aria-label="Menu"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden px-4 pb-4">
+        <a
+          href="#home"
+          class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+          >Accueil</a
+        >
+        <a
+          href="#about"
+          class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+          >À propos</a
+        >
+        <a
+          href="#skills"
+          class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+          >Compétences</a
+        >
+        <a
+          href="#experience"
+          class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+          >Expériences</a
+        >
+        <a
+          href="#projects"
+          class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+          >Projets</a
+        >
+        <a
+          href="#downloads"
+          class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+          >Téléchargements</a
+        >
+        <a
+          href="#contact"
+          class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800"
+          >Contact</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center justify-center text-center"
+    >
+      <!-- Updated background image: abstract internet network that complements the avatar -->
+      <img
+        src="images/hero_network.png"
+        alt="Arrière-plan réseau internet sombre avec lignes et points lumineux"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <!-- Dark overlay for better contrast -->
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="relative z-10 max-w-3xl px-6 py-12">
+        <!-- Updated avatar to an illustration of a developer coding from behind -->
+        <img
+          src="images/avatar4.png"
+          alt="Avatar"
+          class="w-32 h-32 mx-auto mb-6 rounded-full border-4 border-white shadow-lg object-cover"
+        />
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          Malek&nbsp;Nouar
+        </h1>
+        <p class="text-xl md:text-2xl mb-8">
+          Développeur passionné en <span class="text-blue-400">Python</span>,
+          <span class="text-green-400">C#</span> et
+          <span class="text-purple-400">Angular</span>
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="downloads/CV_Malek_Nouar_Premium.pdf"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-xl shadow-md transition"
+            download
+            >Télécharger CV</a
+          >
+          <a
+            href="#contact"
+            class="bg-transparent border border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 rounded-xl shadow-md transition"
+            >Me contacter</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white dark:bg-gray-800">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+          À propos
+        </h2>
+        <div class="prose dark:prose-invert max-w-none text-lg space-y-6 reveal">
+          <p>
+        Développeur full stack confirmé avec plus de 4 ans d’expérience en
+            interne chez LGM, je conçois et développe des applications
+            logicielles robustes et innovantes. Expert en Python, C#, Angular,
+            CI/CD et Docker, j’évolue aussi bien sur des architectures
+            microservices que sur des applications desktop.&nbsp;Habitué aux
+            environnements Agile et internationaux, je m’adapte rapidement et
+            collabore efficacement avec des équipes pluridisciplinaires.
+          </p>
+          <p>
+            Diplomé ingénieur en informatique de l’ENSIIE et titulaire d’une
+            licence de mathématiques de Sorbonne Université, j’accorde
+            une grande importance à la rigueur scientifique et à la qualité du
+            code. Mes réalisations clés incluent la réduction des temps
+            d’immobilisation ferroviaire chez Alstom via un algorithme
+            d’optimisation et une interface C#/WPF, l’accélération de la
+            validation numérique chez Safran grâce à un outil Python/Qt/
+            PostgreSQL, et la sécurisation des interventions caténaires avec un
+            outil temps réel Angular/.NET/Docker.
+          </p>
+        </div>
+        <div class="mt-8 flex flex-col md:flex-row justify-center gap-8 reveal">
+          <div class="flex-1 bg-gray-50 dark:bg-gray-900 p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-semibold mb-4">
+              Atouts principaux
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                <span>Expertise technique solide en Python, C#, Angular, CI/CD & Docker.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                <span>Adaptabilité et autonomie dans des contextes variés et internationaux.</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                <span>Expérience avérée dans la gestion de projets et le travail en équipe Agile.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1 bg-gray-50 dark:bg-gray-900 p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-semibold mb-4">Langues</h3>
+            <p class="mb-3">Français : courant</p>
+            <p class="mb-3">Anglais : professionnel (C1)</p>
+            <h3 class="text-xl font-semibold mt-6 mb-4">Soft skills</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-users text-green-500 mr-3"></i>
+                <span>Travail en équipe internationale</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-sync-alt text-green-500 mr-3"></i>
+                <span>Adaptabilité et autonomie</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-bullseye text-green-500 mr-3"></i>
+                <span>Orientation résultats</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-comments text-green-500 mr-3"></i>
+                <span>Communication claire</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-brain text-green-500 mr-3"></i>
+                <span>Esprit analytique</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-100 dark:bg-gray-800">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+          Compétences
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8 reveal">
+          <!-- Frontend -->
+          <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md">
+            <h3 class="text-xl font-semibold mb-4 flex items-center">
+              <i class="fas fa-laptop-code text-purple-500 mr-3"></i>Frontend
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="inline-flex items-center px-3 py-1 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-300 rounded-full text-sm">
+                <i class="fab fa-angular mr-2"></i>Angular 15+
+              </span>
+              <span class="inline-flex items-center px-3 py-1 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-300 rounded-full text-sm">
+                <i class="fab fa-js-square mr-2"></i>TypeScript
+              </span>
+              <span class="inline-flex items-center px-3 py-1 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-300 rounded-full text-sm">
+                <i class="fab fa-css3-alt mr-2"></i>CSS3
+              </span>
+              <span class="inline-flex items-center px-3 py-1 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-300 rounded-full text-sm">
+                <i class="fab fa-html5 mr-2"></i>HTML5
+              </span>
+              <span class="inline-flex items-center px-3 py-1 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-300 rounded-full text-sm">
+                <i class="fas fa-palette mr-2"></i>Material UI
+              </span>
+            </div>
+          </div>
+          <!-- Backend -->
+          <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md">
+            <h3 class="text-xl font-semibold mb-4 flex items-center">
+              <i class="fas fa-server text-blue-500 mr-3"></i>Backend
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="inline-flex items-center px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 rounded-full text-sm">
+                <i class="fab fa-python mr-2"></i>Python 3.10+
+              </span>
+              <span class="inline-flex items-center px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 rounded-full text-sm">
+                <i class="fab fa-python mr-2"></i>FastAPI & Flask
+              </span>
+              <span class="inline-flex items-center px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 rounded-full text-sm">
+                <i class="fab fa-cuttlefish mr-2"></i>C# .NET Core 6
+              </span>
+              <span class="inline-flex items-center px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 rounded-full text-sm">
+                <i class="fas fa-code-branch mr-2"></i>WPF
+              </span>
+              <span class="inline-flex items-center px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 rounded-full text-sm">
+                <i class="fas fa-cube mr-2"></i>REST & OpenAPI
+              </span>
+            </div>
+          </div>
+          <!-- Databases -->
+          <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md">
+            <h3 class="text-xl font-semibold mb-4 flex items-center">
+              <i class="fas fa-database text-green-500 mr-3"></i>Bases de données
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="inline-flex items-center px-3 py-1 bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-300 rounded-full text-sm">
+                <i class="fas fa-database mr-2"></i>PostgreSQL 17
+              </span>
+              <span class="inline-flex items-center px-3 py-1 bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-300 rounded-full text-sm">
+                <i class="fas fa-database mr-2"></i>SQL Server
+              </span>
+              <span class="inline-flex items-center px-3 py-1 bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-300 rounded-full text-sm">
+                <i class="fas fa-database mr-2"></i>MySQL
+              </span>
+            </div>
+          </div>
+          <!-- DevOps & Tools -->
+          <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md">
+            <h3 class="text-xl font-semibold mb-4 flex items-center">
+              <i class="fas fa-tools text-yellow-500 mr-3"></i>DevOps & Outils
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="inline-flex items-center px-3 py-1 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-700 dark:text-yellow-300 rounded-full text-sm">
+                <i class="fab fa-docker mr-2"></i>Docker / Compose
+              </span>
+              <span class="inline-flex items-center px-3 py-1 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-700 dark:text-yellow-300 rounded-full text-sm">
+                <i class="fas fa-code mr-2"></i>CI/CD GitLab & Jenkins
+              </span>
+              <span class="inline-flex items-center px-3 py-1 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-700 dark:text-yellow-300 rounded-full text-sm">
+                <i class="fas fa-project-diagram mr-2"></i>Agile & Scrum
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 bg-white dark:bg-gray-800">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+          Expériences
+        </h2>
+        <!-- Timeline -->
+        <div class="relative border-l-2 border-blue-500 pl-8 reveal">
+          <!-- Each experience is a timeline item -->
+          <div class="mb-10">
+            <div class="absolute -left-4 top-0 bg-blue-500 w-3 h-3 rounded-full"></div>
+            <h3 class="text-xl font-semibold flex items-center">
+              <!-- SNCF logo added for visual identity -->
+              <img src="images/logos/sncf.svg" alt="SNCF logo" class="w-6 h-6 mr-2 inline-block dark:invert" />
+              SNCF Réseau
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2020 – 2022</p>
+            <p class="mb-1">
+              Développement d’un outil temps réel pour la mise en protection des caténaires : Angular/.NET/Docker, microservices, base de données PostgreSQL temps réel.
+            </p>
+            <p class="text-sm italic">Impact : sécurisation et suivi en temps réel.</p>
+          </div>
+          <div class="mb-10">
+            <div class="absolute -left-4 top-0 bg-blue-500 w-3 h-3 rounded-full"></div>
+            <h3 class="text-xl font-semibold flex items-center">
+              <!-- Icône de train pour représenter Oc’Via Maintenance, client du projet SPLIT -->
+              <img src="images/icons/train.svg" alt="Oc’Via Maintenance" class="w-6 h-6 mr-2 inline-block dark:invert" />
+              Projet SPLIT
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2022</p>
+            <p class="mb-1">
+              Conception d’un outil interne de gestion multi‑sites : full stack Python/Angular/PostgreSQL avec pipelines CI/CD GitLab.
+            </p>
+            <p class="text-sm italic">Impact : collaboration renforcée et pilotage optimisé.</p>
+          </div>
+          <div class="mb-10">
+            <div class="absolute -left-4 top-0 bg-blue-500 w-3 h-3 rounded-full"></div>
+            <h3 class="text-xl font-semibold flex items-center">
+              <!-- Logo SNCF pour représenter le client du projet APIVUT -->
+              <img src="images/logos/sncf.svg" alt="Logo SNCF" class="w-6 h-6 mr-2 inline-block dark:invert" />
+              Projet APIVUT
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2022 – 2023</p>
+            <p class="mb-1">
+              Développement d’API pour l’interconnexion de systèmes industriels : Python (FastAPI), OpenAPI, CI/CD.
+            </p>
+            <p class="text-sm italic">Impact : automatisation des échanges de données et réduction des erreurs.</p>
+          </div>
+          <div class="mb-10">
+            <div class="absolute -left-4 top-0 bg-blue-500 w-3 h-3 rounded-full"></div>
+            <h3 class="text-xl font-semibold flex items-center">
+              <!-- Alstom logo -->
+              <img src="images/logos/alstom.png" alt="Alstom logo" class="w-6 h-6 mr-2 inline-block dark:invert" />
+              Alstom
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2023 – présent</p>
+            <p class="mb-1">
+              Digitalisation de la maintenance du matériel roulant au Royaume‑Uni, en Roumanie et en Inde : algorithme d’optimisation et interface C#/WPF.
+            </p>
+            <p class="text-sm italic">Impact : réduction des immobilisations et déploiement industriel.</p>
+          </div>
+          <div class="mb-10">
+            <div class="absolute -left-4 top-0 bg-blue-500 w-3 h-3 rounded-full"></div>
+            <h3 class="text-xl font-semibold flex items-center">
+              <!-- Safran logo -->
+              <img src="images/logos/safran.png" alt="Safran logo" class="w-6 h-6 mr-2 inline-block dark:invert" />
+              Safran Aircraft Engines
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2024 – présent</p>
+            <p class="mb-1">
+              Outil de suivi de configuration numérique CATIA en Python/Qt/PostgreSQL avec pipelines CI/CD et tests unitaires.
+            </p>
+            <p class="text-sm italic">Impact : validation numérique accélérée et fiabilisée.</p>
+          </div>
+          <div class="mb-10">
+            <div class="absolute -left-4 top-0 bg-blue-500 w-3 h-3 rounded-full"></div>
+            <h3 class="text-xl font-semibold flex items-center">
+              <!-- Logo Altrad Endel dans la chronologie -->
+              <img src="images/logos/altrad_endel.png" alt="Logo Altrad Endel" class="w-8 h-6 mr-2 inline-block dark:invert object-contain" />
+              Altrad Endel
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2024 – 2025</p>
+            <p class="mb-1">
+              Automatisation de la migration de données GMAO via des scripts Python/Excel.
+            </p>
+            <p class="text-sm italic">Impact : fiabilisation des flux et gain de temps.</p>
+          </div>
+          <div class="mb-0">
+            <div class="absolute -left-4 top-0 bg-blue-500 w-3 h-3 rounded-full"></div>
+            <h3 class="text-xl font-semibold flex items-center">
+              <!-- Icône de flacon pour représenter le Laboratoire SVR -->
+              <img src="images/icons/flask.svg" alt="Laboratoire SVR" class="w-6 h-6 mr-2 inline-block dark:invert" />
+              SVR Cosmétique
+            </h3>
+            <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2024</p>
+            <p class="mb-1">
+              Applications de gestion du packaging et réglementaire : Angular 15 / ASP.NET / PostgreSQL.
+            </p>
+            <p class="text-sm italic">Impact : amélioration du suivi réglementaire et du cycle packaging.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-100 dark:bg-gray-800">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+          Projets
+        </h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="relative rounded-xl overflow-hidden shadow-md group reveal"
+          >
+            <img
+              src="images/project1.png"
+              alt="Projet SNCF"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center text-white p-4"
+            >
+              <h3 class="text-lg font-semibold mb-2 flex items-center">
+                <img src="images/logos/sncf.svg" alt="Logo SNCF" class="h-5 w-auto mr-2 dark:invert" />
+                SNCF Réseau
+              </h3>
+              <p class="mb-4 text-sm">
+                Outil temps réel pour la mise en protection des caténaires.
+              </p>
+              <!-- Liens GitHub/Démo supprimés car non disponibles -->
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="relative rounded-xl overflow-hidden shadow-md group reveal"
+          >
+            <img
+              src="images/project2.png"
+              alt="Projet SPLIT"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center text-white p-4"
+            >
+              <h3 class="text-lg font-semibold mb-2 flex items-center">
+                <!-- Oc’Via Maintenance is the client for SPLIT; using a train icon as a visual cue -->
+                <img src="images/icons/train.svg" alt="Oc’Via Maintenance" class="h-5 w-auto mr-2 dark:invert" />
+                Projet SPLIT
+              </h3>
+              <p class="mb-4 text-sm">
+                Outil interne de gestion multi‑sites.
+              </p>
+              <!-- Liens GitHub/Démo supprimés car non disponibles -->
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div
+            class="relative rounded-xl overflow-hidden shadow-md group reveal"
+          >
+            <img
+              src="images/project3.png"
+              alt="Projet APIVUT"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center text-white p-4"
+            >
+              <h3 class="text-lg font-semibold mb-2 flex items-center">
+                <!-- APIVUT est un projet pour SNCF, on réutilise le logo SNCF -->
+                <img src="images/logos/sncf.svg" alt="Logo SNCF" class="h-5 w-auto mr-2 dark:invert" />
+                Projet APIVUT
+              </h3>
+              <p class="mb-4 text-sm">
+                APIs industrielles & interconnexion de systèmes.
+              </p>
+              <!-- Liens GitHub/Démo supprimés car non disponibles -->
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div
+            class="relative rounded-xl overflow-hidden shadow-md group reveal"
+          >
+            <img
+              src="images/project4.png"
+              alt="Projet Alstom"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center text-white p-4"
+            >
+              <h3 class="text-lg font-semibold mb-2 flex items-center">
+                <img src="images/logos/alstom.png" alt="Logo Alstom" class="h-5 w-auto mr-2 dark:invert" />
+                Alstom
+              </h3>
+              <p class="mb-4 text-sm">
+                Digitalisation de la maintenance du matériel roulant.
+              </p>
+              <!-- Liens GitHub/Démo supprimés car non disponibles -->
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div
+            class="relative rounded-xl overflow-hidden shadow-md group reveal"
+          >
+            <img
+              src="images/project5.png"
+              alt="Projet Safran"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center text-white p-4"
+            >
+              <h3 class="text-lg font-semibold mb-2 flex items-center">
+                <img src="images/logos/safran.png" alt="Logo Safran" class="h-5 w-auto mr-2 dark:invert" />
+                Safran Aircraft Engines
+              </h3>
+              <p class="mb-4 text-sm">
+                Suivi de configuration numérique CATIA.
+              </p>
+              <!-- Liens GitHub/Démo supprimés car non disponibles -->
+            </div>
+          </div>
+          <!-- Project 6 -->
+          <div
+            class="relative rounded-xl overflow-hidden shadow-md group reveal"
+          >
+            <img
+              src="images/project6.png"
+              alt="Projet Altrad Endel"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center text-white p-4"
+            >
+            <h3 class="text-lg font-semibold mb-2 flex items-center">
+                <!-- Remplace l'icône générique par le véritable logo Altrad Endel pour renforcer l'identité visuelle du client -->
+                <img src="images/logos/altrad_endel.png" alt="Logo Altrad Endel" class="h-6 w-auto mr-2 dark:invert object-contain" />
+                Altrad Endel
+              </h3>
+              <p class="mb-4 text-sm">
+                Scripts Python/Excel pour migration de données GMAO.
+              </p>
+              <!-- Liens GitHub/Démo supprimés car non disponibles -->
+            </div>
+          </div>
+          <!-- Project 7 -->
+          <div
+            class="relative rounded-xl overflow-hidden shadow-md group reveal"
+          >
+            <img
+              src="images/project7.png"
+              alt="Projet SVR Cosmétique"
+              class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div
+              class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center text-white p-4"
+            >
+              <h3 class="text-lg font-semibold mb-2 flex items-center">
+                <!-- Using a flask icon for Laboratoire SVR -->
+                <img src="images/icons/flask.svg" alt="Laboratoire SVR" class="h-5 w-auto mr-2 dark:invert" />
+                SVR Cosmétique
+              </h3>
+              <p class="mb-4 text-sm">
+                Applications packaging & réglementaire.
+              </p>
+              <!-- Liens GitHub/Démo supprimés car non disponibles -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section id="downloads" class="py-16 bg-white dark:bg-gray-800">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+          Téléchargements
+        </h2>
+        <div class="grid md:grid-cols-1 gap-8 reveal">
+          <!-- Section de téléchargement réduite pour se concentrer sur l'essentiel -->
+          <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300">
+            <i class="far fa-file-pdf text-red-500 text-6xl mb-4"></i>
+            <h3 class="text-2xl font-semibold mb-2">Curriculum Vitae</h3>
+            <p class="mb-6 text-sm max-w-sm">
+              Téléchargez mon CV détaillé, présentant mon parcours professionnel,
+              mes compétences et mes réalisations clés.
+            </p>
+            <a
+              href="downloads/CV_Malek_Nouar_Premium.pdf"
+              download
+              class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full font-medium transition-transform duration-200 transform hover:-translate-y-1"
+              >Télécharger le CV</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technologies & Clients Section -->
+    <section id="logos" class="py-16 bg-white dark:bg-gray-900">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+          Technologies &amp; Clients
+        </h2>
+        <!-- Technology icons row -->
+        <!--
+          The original implementation relied on FontAwesome classes loaded from a CDN.  In an
+          offline context these icons were not rendered, so we embed our own SVG
+          assets instead.  All logos live in the `images/tech/` directory and can be
+          easily swapped out or extended.  The `dark:invert` class ensures that
+          monochrome logos remain visible in dark mode.
+        -->
+        <div class="flex flex-wrap justify-center gap-8 mb-12">
+          <img src="images/tech/angular.svg" alt="Angular" class="h-12 w-auto dark:invert transition-transform duration-200 transform hover:scale-110" />
+          <img src="images/tech/python.svg" alt="Python" class="h-12 w-auto dark:invert transition-transform duration-200 transform hover:scale-110" />
+          <img src="images/tech/docker.svg" alt="Docker" class="h-12 w-auto dark:invert transition-transform duration-200 transform hover:scale-110" />
+          <img src="images/tech/gitlab.svg" alt="GitLab CI/CD" class="h-12 w-auto dark:invert transition-transform duration-200 transform hover:scale-110" />
+          <img src="images/tech/node-js.svg" alt="Node.js" class="h-12 w-auto dark:invert transition-transform duration-200 transform hover:scale-110" />
+        </div>
+        <!-- Clients logos row -->
+        <div class="flex flex-wrap justify-center gap-10 items-center">
+          <!-- SNCF logo pour les projets APIVUT et SNCF Réseau -->
+          <img src="images/logos/sncf.svg" alt="Logo SNCF" class="h-10 w-auto dark:invert transition-transform duration-200 transform hover:scale-110" />
+          <!-- Alstom logo -->
+          <img src="images/logos/alstom.png" alt="Logo Alstom" class="h-10 w-auto dark:invert transition-transform duration-200 transform hover:scale-110" />
+          <!-- Safran logo -->
+          <img src="images/logos/safran.png" alt="Logo Safran" class="h-10 w-auto dark:invert transition-transform duration-200 transform hover:scale-110" />
+          <!-- Oc’Via Maintenance : icône de train -->
+          <img src="images/icons/train.svg" alt="Oc’Via Maintenance" class="h-8 w-auto dark:invert transition-transform duration-200 transform hover:scale-110" />
+          <!-- Altrad Endel : vrai logo -->
+          <img src="images/logos/altrad_endel.png" alt="Logo Altrad Endel" class="h-8 w-auto dark:invert transition-transform duration-200 transform hover:scale-110 object-contain" />
+          <!-- Laboratoire SVR : icône de flacon -->
+          <img src="images/icons/flask.svg" alt="Laboratoire SVR" class="h-8 w-auto dark:invert transition-transform duration-200 transform hover:scale-110" />
+        </div>
+        <!-- Suppression du call-to-action LinkedIn -->
+      </div>
+    </section>
+
+    <!-- Qualités Section -->
+    <section id="qualites" class="py-16 bg-gray-50 dark:bg-gray-900">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+          Pourquoi me choisir ?
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8 reveal">
+          <!-- Fiabilité & Qualité -->
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
+            <img src="images/icons/shield.svg" alt="Fiabilité" class="h-12 w-12 mb-4 dark:invert" />
+            <h3 class="text-xl font-semibold mb-3">Fiabilité &amp; Qualité</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">
+              Code robuste, tests rigoureux et respect des meilleures pratiques assurent
+              des solutions pérennes et sécurisées.
+            </p>
+          </div>
+          <!-- Innovation & Créativité -->
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
+            <img src="images/icons/lightbulb.svg" alt="Innovation" class="h-12 w-12 mb-4 dark:invert" />
+            <h3 class="text-xl font-semibold mb-3">Innovation &amp; Créativité</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">
+              Toujours en veille technologique, j’apporte des idées nouvelles et des
+              solutions adaptées aux enjeux de demain.
+            </p>
+          </div>
+          <!-- Collaboration & Communication -->
+          <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
+            <img src="images/icons/users.svg" alt="Collaboration" class="h-12 w-12 mb-4 dark:invert" />
+            <h3 class="text-xl font-semibold mb-3">Collaboration &amp; Écoute</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300">
+              Communication claire et travail d’équipe sont au cœur de ma démarche pour
+              garantir la réussite des projets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100 dark:bg-gray-800">
+      <div class="max-w-5xl mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+          Contact
+        </h2>
+        <div class="grid md:grid-cols-2 gap-10 reveal">
+          <div>
+            <form
+              action="mailto:malek.nouar@example.com"
+              method="post"
+              enctype="text/plain"
+              class="space-y-4"
+            >
+              <div>
+                <label for="name" class="block text-sm font-medium mb-1"
+                  >Nom</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium mb-1"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900"
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium mb-1"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md bg-white dark:bg-gray-900"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md shadow-md"
+              >
+                Envoyer
+              </button>
+            </form>
+          </div>
+          <div class="flex flex-col justify-center space-y-4">
+            <p class="text-lg">
+              Vous pouvez également me trouver sur les réseaux sociaux ou m’envoyer
+              directement un email.
+            </p>
+            <div class="flex space-x-6 text-2xl">
+              <a
+                href="https://github.com/maleknouar"
+                target="_blank"
+                rel="noopener"
+                class="hover:text-blue-600"
+              >
+                <img src="images/icons/github.svg" alt="GitHub" class="h-6 w-auto dark:invert" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/maleknouar"
+                target="_blank"
+                rel="noopener"
+                class="hover:text-blue-700"
+              >
+                <img src="images/icons/linkedin.svg" alt="LinkedIn" class="h-6 w-auto dark:invert" />
+              </a>
+              <a
+                href="mailto:malek.nouar@example.com"
+                class="hover:text-red-500"
+              >
+                <img src="images/icons/envelope.svg" alt="Email" class="h-6 w-auto dark:invert" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-900 py-6">
+      <div
+        class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+      >
+        <p class="text-sm">© 2025 Malek Nouar. Tous droits réservés.</p>
+        <div class="flex space-x-4 text-xl">
+          <a
+            href="https://github.com/maleknouar"
+            target="_blank"
+            rel="noopener"
+            class="hover:text-blue-600"
+          >
+            <img src="images/icons/github.svg" alt="GitHub" class="h-6 w-auto dark:invert" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/maleknouar"
+            target="_blank"
+            rel="noopener"
+            class="hover:text-blue-700"
+          >
+            <img src="images/icons/linkedin.svg" alt="LinkedIn" class="h-6 w-auto dark:invert" />
+          </a>
+          <a
+            href="mailto:malek.nouar@example.com"
+            class="hover:text-red-500"
+          >
+            <img src="images/icons/envelope.svg" alt="Email" class="h-6 w-auto dark:invert" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobileMenuButton');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.style.display =
+          mobileMenu.style.display === 'block' ? 'none' : 'block';
+      });
+
+      // Dark mode toggle
+      const themeToggle = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+      const root = document.documentElement;
+      function setDarkMode(enabled) {
+        if (enabled) {
+          root.classList.add('dark');
+          themeIcon.classList.remove('fa-moon');
+          themeIcon.classList.add('fa-sun');
+        } else {
+          root.classList.remove('dark');
+          themeIcon.classList.add('fa-moon');
+          themeIcon.classList.remove('fa-sun');
+        }
+      }
+      // Initialize based on user preference
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setDarkMode(prefersDark);
+      themeToggle.addEventListener('click', () => {
+        const isDark = root.classList.contains('dark');
+        setDarkMode(!isDark);
+      });
+
+      // Reveal animations using IntersectionObserver
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('active');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+      reveals.forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Malek Nouar
+N:Nouar;Malek;;;
+TITLE:Développeur Full Stack confirmé
+ORG:LGM
+TEL;TYPE=WORK,VOICE:+33 6 12 34 56 78
+EMAIL;TYPE=PREF,INTERNET:malek.nouar@example.com
+URL:https://github.com/maleknouar
+ADR;TYPE=WORK:;;Île-de-France, France;;;;
+NOTE:Portfolio disponible sur https://maleknouar.dev
+END:VCARD
