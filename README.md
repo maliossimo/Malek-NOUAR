@@ -1,1 +1,1 @@
-# Portfolio Malek Nouar\n\nCe dépôt contient le code source du portfolio de Malek Nouar.
+# Portfolio Malek Nouar\n\nCe dépôt contient le code source du portfolio de Malek Nouar. Pour le déployer sur GitHub Pages, publiez la branche avec ces fichiers sur `https://username.github.io/`.\n
