@@ -47,16 +47,9 @@
               <span class="hidden md:inline">Malek&nbsp;Nouar</span>
             </a>
           </div>
-          <!-- Show nav links only on extra-large screens (>=1280px). On smaller screens the bottom navigation is used instead. -->
-          <!--
-            Desktop navigation container.  It remains hidden on viewports
-            narrower than the `lg` breakpoint (1024px).  On small devices
-            users navigate via the bottom bar, so we avoid cluttering the top
-            navigation with links that might wrap or be truncated.  The
-            Tailwind class `lg:flex` ensures the links are only visible on
-            medium/large screens.
-          -->
-          <div id="navLinksDesktop" class="hidden lg:flex ml-10 items-baseline space-x-4">
+          <!-- Show nav links only on extra-large screens (>=1280px) to avoid clutter on tablets and mobiles -->
+          <div id="navLinksDesktop" class="hidden xl:block">
+            <div class="ml-10 flex items-baseline space-x-4">
               <!-- Navigation links with icons for a richer appearance -->
               <a
                 href="#home"
@@ -100,6 +93,7 @@
                 <img src="images/icons/contact.svg" alt="Contact" class="h-5 w-5 dark:invert" />
                 <span>Contact</span>
               </a>
+            </div>
           </div>
           <div class="flex items-center space-x-4">
             <!-- Space holder: no mobile nav icons here; bottom navigation is used on small screens -->

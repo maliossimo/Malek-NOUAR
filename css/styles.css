@@ -19,6 +19,10 @@ body {
   transform: translateY(0);
 }
 
+/* The visibility of the desktop navigation links is now handled directly via
+   Tailwind's responsive utility classes (e.g. `hidden lg:flex`).  No additional
+   custom CSS is required here to hide them on smaller screens. */
+
 /* Custom signature font for the brand name */
 .font-signature {
   font-family: 'Great Vibes', cursive;
