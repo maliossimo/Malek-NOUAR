@@ -65,12 +65,16 @@
           <div class="flex items-center space-x-3">
             <!-- Logo monogramme MN -->
             <img src="images/logos/logo_mn.png" alt="Logo MN" class="h-8 w-8" />
-            <!-- Nom simple et professionnel -->
+            <!-- Nom simple et professionnel : affiche un monogramme sur mobile et le nom complet sur tablettes/desktop -->
             <a
               href="#home"
-              class="text-xl md:text-2xl font-semibold text-gray-200 dark:text-gray-100 tracking-wide hover:text-purple-400 transition-colors"
-              >Malek&nbsp;Nouar</a
+              class="text-xl md:text-2xl font-semibold text-gray-200 dark:text-gray-100 tracking-wide hover:text-purple-400 transition-colors whitespace-nowrap"
             >
+              <!-- On small screens, show only the initials to save space -->
+              <span class="md:hidden">MN</span>
+              <!-- On medium screens and up, show the full name -->
+              <span class="hidden md:inline">Malek&nbsp;Nouar</span>
+            </a>
           </div>
           <div id="navLinks" class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
