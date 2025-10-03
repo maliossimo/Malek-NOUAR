@@ -718,12 +718,18 @@
         </h2>
         <div class="grid md:grid-cols-2 gap-10 reveal">
           <div>
+            <!-- Contact form handled by FormSubmit. When hosted on GitHub Pages the form action
+                 posts to FormSubmit which then forwards the message to the specified email.
+                 See https://formsubmit.co for details. -->
             <form
-              action="mailto:malek.nouar@example.com"
-              method="post"
-              enctype="text/plain"
+              action="https://formsubmit.co/malek.nouar96@gmail.com"
+              method="POST"
               class="space-y-4"
             >
+              <!-- Hidden inputs configure the email subject and disable captcha. The subject helps
+                   identify that the message comes from your portfolio. -->
+              <input type="hidden" name="_subject" value="Message reçu via mon portfolio" />
+              <input type="hidden" name="_captcha" value="false" />
               <div>
                 <label for="name" class="block text-sm font-medium mb-1"
                   >Nom</label
