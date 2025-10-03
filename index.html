@@ -56,9 +56,10 @@
   >
     <!-- Navigation -->
     <header class="fixed w-full z-40 bg-transparent">
-      <!-- Compact floating nav bar improved for mobile readability -->
+      <!-- Compact floating nav bar improved for mobile readability. It shrinks on scroll and expands on hover -->
       <nav
-        class="fixed top-2 left-1/2 -translate-x-1/2 z-50 w-[95%] md:w-[80%] px-4 py-1.5 md:py-2 bg-gray-900/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-full shadow-xl ring-1 ring-purple-500/20"
+        id="mainNav"
+        class="fixed top-2 left-1/2 -translate-x-1/2 z-50 w-[95%] md:w-[80%] px-4 py-1.5 md:py-2 bg-gray-900/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-full shadow-xl ring-1 ring-purple-500/20 transition-transform transition-opacity duration-300"
       >
         <div class="flex items-center justify-between h-10 md:h-14">
           <div class="flex items-center space-x-3">
@@ -135,59 +136,62 @@
               <img src="images/icons/moon.svg" alt="Mode sombre" id="themeIcon" class="h-6 w-6 dark:hidden" />
               <img src="images/icons/sun.svg" alt="Mode clair" id="themeIconAlt" class="h-6 w-6 hidden dark:inline" />
             </button>
-            <!-- Mobile menu button -->
-            <button
-              id="mobileMenuButton"
-              class="md:hidden text-xl p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
-              aria-label="Menu"
-            >
-              <img src="images/icons/menu.svg" alt="Menu" class="h-6 w-6 filter invert dark:invert" />
-            </button>
+            <!-- Mobile menu button removed as bottom navigation is used on small screens -->
           </div>
         </div>
       </nav>
-      <!-- Mobile menu -->
-      <div
-        id="mobileMenu"
-        class="md:hidden mt-2 mx-auto w-[90%] px-4 pb-4 bg-gray-900/90 dark:bg-gray-800/90 backdrop-blur-lg rounded-xl shadow-lg ring-1 ring-purple-600/30"
-      >
-        <a
-          href="#home"
-          class="block px-3 py-2 rounded-md text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400"
-          >Accueil</a
-        >
-        <a
-          href="#about"
-          class="block px-3 py-2 rounded-md text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400"
-          >À propos</a
-        >
-        <a
-          href="#skills"
-          class="block px-3 py-2 rounded-md text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400"
-          >Compétences</a
-        >
-        <a
-          href="#experience"
-          class="block px-3 py-2 rounded-md text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400"
-          >Expériences</a
-        >
-        <a
-          href="#projects"
-          class="block px-3 py-2 rounded-md text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400"
-          >Projets</a
-        >
-        <a
-          href="#downloads"
-          class="block px-3 py-2 rounded-md text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400"
-          >Téléchargements</a
-        >
-        <a
-          href="#contact"
-          class="block px-3 py-2 rounded-md text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400"
-          >Contact</a
-        >
-      </div>
+      <!-- Mobile menu removed: replaced by bottom navigation for small screens -->
+      <div id="mobileMenu" class="hidden"></div>
     </header>
+
+    <!-- Bottom navigation bar for small screens -->
+    <nav
+      id="mobileBottomNav"
+      class="fixed bottom-3 left-1/2 -translate-x-1/2 z-40 flex md:hidden justify-around items-center w-[90%] px-4 py-2 bg-gray-900/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-full shadow-xl ring-1 ring-purple-500/20"
+    >
+      <a
+        href="#home"
+        class="flex flex-col items-center text-xs font-medium text-gray-100 dark:text-gray-100 hover:text-purple-400"
+      >
+        <img src="images/icons/home.svg" alt="Accueil" class="h-5 w-5 dark:invert" />
+        <span class="mt-1">Accueil</span>
+      </a>
+      <a
+        href="#about"
+        class="flex flex-col items-center text-xs font-medium text-gray-100 dark:text-gray-100 hover:text-purple-400"
+      >
+        <img src="images/icons/user.svg" alt="À propos" class="h-5 w-5 dark:invert" />
+        <span class="mt-1">À propos</span>
+      </a>
+      <a
+        href="#skills"
+        class="flex flex-col items-center text-xs font-medium text-gray-100 dark:text-gray-100 hover:text-purple-400"
+      >
+        <img src="images/icons/code.svg" alt="Compétences" class="h-5 w-5 dark:invert" />
+        <span class="mt-1">Comp.</span>
+      </a>
+      <a
+        href="#experience"
+        class="flex flex-col items-center text-xs font-medium text-gray-100 dark:text-gray-100 hover:text-purple-400"
+      >
+        <img src="images/icons/briefcase.svg" alt="Expériences" class="h-5 w-5 dark:invert" />
+        <span class="mt-1">Expér.</span>
+      </a>
+      <a
+        href="#projects"
+        class="flex flex-col items-center text-xs font-medium text-gray-100 dark:text-gray-100 hover:text-purple-400"
+      >
+        <img src="images/icons/folder.svg" alt="Projets" class="h-5 w-5 dark:invert" />
+        <span class="mt-1">Projets</span>
+      </a>
+      <a
+        href="#contact"
+        class="flex flex-col items-center text-xs font-medium text-gray-100 dark:text-gray-100 hover:text-purple-400"
+      >
+        <img src="images/icons/contact.svg" alt="Contact" class="h-5 w-5 dark:invert" />
+        <span class="mt-1">Contact</span>
+      </a>
+    </nav>
 
     <!-- Hero Section -->
     <section
@@ -917,13 +921,6 @@
 
     <!-- Scripts -->
     <script>
-      // Mobile menu toggle
-      const mobileMenuButton = document.getElementById('mobileMenuButton');
-      const mobileMenu = document.getElementById('mobileMenu');
-      mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.style.display =
-          mobileMenu.style.display === 'block' ? 'none' : 'block';
-      });
 
       // Dark mode toggle with local icons
       const themeToggle = document.getElementById('themeToggle');
@@ -953,6 +950,26 @@
         setDarkMode(!isDark);
         // Persist the user's preference
         localStorage.setItem('theme', !isDark ? 'dark' : 'light');
+      });
+
+      // Shrink navigation bar on scroll and expand on hover
+      const mainNav = document.getElementById('mainNav');
+      function handleScroll() {
+        if (window.scrollY > 60) {
+          mainNav.classList.add('scale-95', 'opacity-90');
+        } else {
+          mainNav.classList.remove('scale-95', 'opacity-90');
+        }
+      }
+      // Run on load
+      handleScroll();
+      window.addEventListener('scroll', handleScroll);
+      // Expand nav when hovering (desktop only)
+      mainNav.addEventListener('mouseenter', () => {
+        mainNav.classList.remove('scale-95', 'opacity-90');
+      });
+      mainNav.addEventListener('mouseleave', () => {
+        handleScroll();
       });
 
       // Reveal animations using IntersectionObserver
