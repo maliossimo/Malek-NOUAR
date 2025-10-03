@@ -730,8 +730,10 @@
                    identify that the message comes from your portfolio. -->
               <input type="hidden" name="_subject" value="Message reçu via mon portfolio" />
               <input type="hidden" name="_captcha" value="false" />
-              <!-- After submission redirect the user to a thank‑you page within the site -->
-              <input type="hidden" name="_next" value="merci.html" />
+              <!-- After submission redirect the user to a thank‑you page within the site. FormSubmit
+                   requires an absolute URL for _next, not a relative path. Update this URL if you
+                   deploy to a different domain or repository. -->
+              <input type="hidden" name="_next" value="https://maliossimo.github.io/merci.html" />
               <div>
                 <label for="name" class="block text-sm font-medium mb-1"
                   >Nom</label
