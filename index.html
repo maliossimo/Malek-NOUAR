@@ -19,37 +19,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Great+Vibes&display=swap"
       rel="stylesheet"
     />
-    <!-- Font Awesome for icons -->
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
-    <style>
-      /* Base styles */
-      body {
-        font-family: 'Inter', sans-serif;
-      }
-      /* Hide the mobile menu by default */
-      #mobileMenu {
-        display: none;
-      }
-      /* Smooth transitions for reveal animations */
-      .reveal {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-      }
-      .reveal.active {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* Custom signature font for the brand name */
-      .font-signature {
-        font-family: 'Great Vibes', cursive;
-        letter-spacing: 1px;
-      }
-    </style>
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body
     class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200"
@@ -888,51 +859,6 @@
     </nav>
 
     <!-- Scripts -->
-    <script>
-
-      // Dark mode toggle removed
-
-      // Shrink navigation bar on scroll and expand on hover
-      const mainNav = document.getElementById('mainNav');
-      const navLinks = document.getElementById('navLinks');
-      function handleScroll() {
-        if (window.scrollY > 60) {
-          mainNav.classList.add('scale-95', 'opacity-90');
-          // Hide navigation links on large screens when collapsed
-          if (navLinks) navLinks.classList.add('hidden');
-        } else {
-          mainNav.classList.remove('scale-95', 'opacity-90');
-          if (navLinks) navLinks.classList.remove('hidden');
-        }
-      }
-      // Run on load
-      handleScroll();
-      window.addEventListener('scroll', handleScroll);
-      // Expand nav when hovering (desktop only)
-      mainNav.addEventListener('mouseenter', () => {
-        mainNav.classList.remove('scale-95', 'opacity-90');
-        if (navLinks) navLinks.classList.remove('hidden');
-      });
-      mainNav.addEventListener('mouseleave', () => {
-        handleScroll();
-      });
-
-      // Reveal animations using IntersectionObserver
-      const reveals = document.querySelectorAll('.reveal');
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('active');
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.1 }
-      );
-      reveals.forEach((el) => {
-        observer.observe(el);
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

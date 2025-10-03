@@ -1,0 +1,26 @@
+/* Base styles */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Hide the mobile menu by default */
+#mobileMenu {
+  display: none;
+}
+
+/* Smooth transitions for reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom signature font for the brand name */
+.font-signature {
+  font-family: 'Great Vibes', cursive;
+  letter-spacing: 1px;
+}
