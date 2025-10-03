@@ -120,28 +120,7 @@
             </div>
           </div>
           <div class="flex items-center space-x-4">
-            <!-- Mobile navigation icons row (visible only on small screens) -->
-            <div class="flex md:hidden items-center space-x-3 mr-2">
-              <a href="#home" class="p-1 hover:text-purple-400">
-                <img src="images/icons/home.svg" alt="Accueil" class="h-5 w-5 filter invert dark:invert" />
-              </a>
-              <a href="#about" class="p-1 hover:text-purple-400">
-                <img src="images/icons/user.svg" alt="À propos" class="h-5 w-5 filter invert dark:invert" />
-              </a>
-              <a href="#skills" class="p-1 hover:text-purple-400">
-                <img src="images/icons/code.svg" alt="Compétences" class="h-5 w-5 filter invert dark:invert" />
-              </a>
-              <a href="#experience" class="p-1 hover:text-purple-400">
-                <img src="images/icons/briefcase.svg" alt="Expériences" class="h-5 w-5 filter invert dark:invert" />
-              </a>
-              <a href="#projects" class="p-1 hover:text-purple-400">
-                <img src="images/icons/folder.svg" alt="Projets" class="h-5 w-5 filter invert dark:invert" />
-              </a>
-              <a href="#contact" class="p-1 hover:text-purple-400">
-                <img src="images/icons/contact.svg" alt="Contact" class="h-5 w-5 filter invert dark:invert" />
-              </a>
-            </div>
-            <!-- Dark mode toggle removed -->
+            <!-- Space holder: no mobile nav icons here; bottom navigation is used on small screens -->
           </div>
         </div>
       </nav>
@@ -875,6 +854,34 @@
         </div>
       </div>
     </footer>
+
+    <!-- Bottom navigation for mobile (visible only on small screens) -->
+    <nav class="fixed bottom-0 left-0 right-0 z-50 bg-gray-900/90 dark:bg-gray-800/90 backdrop-blur-lg md:hidden flex justify-around items-center py-2">
+      <a href="#home" class="flex flex-col items-center text-gray-300 dark:text-gray-200 hover:text-purple-400 transition">
+        <img src="images/icons/home.svg" alt="Accueil" class="h-5 w-5 dark:invert" />
+        <span class="text-xs mt-0.5">Accueil</span>
+      </a>
+      <a href="#about" class="flex flex-col items-center text-gray-300 dark:text-gray-200 hover:text-purple-400 transition">
+        <img src="images/icons/user.svg" alt="À propos" class="h-5 w-5 dark:invert" />
+        <span class="text-xs mt-0.5">À&nbsp;propos</span>
+      </a>
+      <a href="#skills" class="flex flex-col items-center text-gray-300 dark:text-gray-200 hover:text-purple-400 transition">
+        <img src="images/icons/code.svg" alt="Compétences" class="h-5 w-5 dark:invert" />
+        <span class="text-xs mt-0.5">Compétences</span>
+      </a>
+      <a href="#experience" class="flex flex-col items-center text-gray-300 dark:text-gray-200 hover:text-purple-400 transition">
+        <img src="images/icons/briefcase.svg" alt="Expériences" class="h-5 w-5 dark:invert" />
+        <span class="text-xs mt-0.5">Expériences</span>
+      </a>
+      <a href="#projects" class="flex flex-col items-center text-gray-300 dark:text-gray-200 hover:text-purple-400 transition">
+        <img src="images/icons/folder.svg" alt="Projets" class="h-5 w-5 dark:invert" />
+        <span class="text-xs mt-0.5">Projets</span>
+      </a>
+      <a href="#contact" class="flex flex-col items-center text-gray-300 dark:text-gray-200 hover:text-purple-400 transition">
+        <img src="images/icons/contact.svg" alt="Contact" class="h-5 w-5 dark:invert" />
+        <span class="text-xs mt-0.5">Contact</span>
+      </a>
+    </nav>
 
     <!-- Scripts -->
     <script>
