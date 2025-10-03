@@ -716,6 +716,12 @@
         <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
           Contact
         </h2>
+        <!-- Thank‑you message (hidden by default). When the URL ends with #thanks this div becomes visible -->
+        <div id="thanks" class="text-center mb-8">
+          <p class="inline-block bg-green-600 text-white px-6 py-3 rounded-md shadow-md">
+            Merci ! Votre message a bien été envoyé.
+          </p>
+        </div>
         <div class="grid md:grid-cols-2 gap-10 reveal">
           <div>
             <!-- Contact form handled by FormSubmit. When hosted on GitHub Pages the form action
@@ -730,10 +736,10 @@
                    identify that the message comes from your portfolio. -->
               <input type="hidden" name="_subject" value="Message reçu via mon portfolio" />
               <input type="hidden" name="_captcha" value="false" />
-              <!-- After submission redirect the user to a thank‑you page within the site. FormSubmit
-                   requires an absolute URL for _next, not a relative path. Update this URL if you
-                   deploy to a different domain or repository. -->
-              <input type="hidden" name="_next" value="https://maliossimo.github.io/merci.html" />
+              <!-- After submission redirect the user back to this portfolio with a #thanks anchor. FormSubmit
+                   requires an absolute URL for _next. Replace the base URL below if you deploy to a
+                   different GitHub Pages site or repository. -->
+              <input type="hidden" name="_next" value="https://maliossimo.github.io/Malek-NOUAR/#thanks" />
               <div>
                 <label for="name" class="block text-sm font-medium mb-1"
                   >Nom</label

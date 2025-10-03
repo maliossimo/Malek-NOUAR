@@ -28,3 +28,13 @@ body {
   font-family: 'Great Vibes', cursive;
   letter-spacing: 1px;
 }
+
+/* Show a confirmation message when the page URL ends with #thanks.
+   The thank‑you container is hidden by default but becomes visible when targeted. */
+#thanks {
+  display: none;
+}
+
+#thanks:target {
+  display: block;
+}
