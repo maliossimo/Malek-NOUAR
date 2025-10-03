@@ -56,18 +56,18 @@
   >
     <!-- Navigation -->
     <header class="fixed w-full z-40 bg-transparent">
-      <!-- A rounded navigation bar with a pronounced backdrop and gradient border -->
+      <!-- Compact floating nav bar improved for mobile readability -->
       <nav
-        class="max-w-7xl mx-auto mt-4 px-6 py-3 bg-gray-900/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-full shadow-xl ring-2 ring-purple-500/30"
+        class="fixed top-2 left-1/2 -translate-x-1/2 z-50 w-[95%] md:w-[80%] px-4 py-1.5 md:py-2 bg-gray-900/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-full shadow-xl ring-1 ring-purple-500/20"
       >
-        <div class="flex items-center justify-between h-16">
+        <div class="flex items-center justify-between h-10 md:h-14">
           <div class="flex items-center space-x-3">
             <!-- Logo monogramme MN -->
             <img src="images/logos/logo_mn.png" alt="Logo MN" class="h-8 w-8" />
             <!-- Nom simple et professionnel -->
             <a
               href="#home"
-              class="text-2xl md:text-3xl font-semibold text-gray-200 dark:text-gray-100 tracking-wide hover:text-purple-400 transition-colors"
+              class="text-xl md:text-2xl font-semibold text-gray-200 dark:text-gray-100 tracking-wide hover:text-purple-400 transition-colors"
               >Malek&nbsp;Nouar</a
             >
           </div>
@@ -76,71 +76,72 @@
               <!-- Navigation links with icons for a richer appearance -->
               <a
                 href="#home"
-                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium text-gray-100 dark:text-gray-100 transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
+                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
               >
-                <img src="images/icons/home.svg" alt="Accueil" class="h-5 w-5 filter invert dark:invert" />
+                <img src="images/icons/home.svg" alt="Accueil" class="h-5 w-5 dark:invert" />
                 <span>Accueil</span>
               </a>
               <a
                 href="#about"
-                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium text-gray-100 dark:text-gray-100 transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
+                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
               >
-                <img src="images/icons/user.svg" alt="À propos" class="h-5 w-5 filter invert dark:invert" />
+                <img src="images/icons/user.svg" alt="À propos" class="h-5 w-5 dark:invert" />
                 <span>À propos</span>
               </a>
               <a
                 href="#skills"
-                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium text-gray-100 dark:text-gray-100 transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
+                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
               >
-                <img src="images/icons/code.svg" alt="Compétences" class="h-5 w-5 filter invert dark:invert" />
+                <img src="images/icons/code.svg" alt="Compétences" class="h-5 w-5 dark:invert" />
                 <span>Compétences</span>
               </a>
               <a
                 href="#experience"
-                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium text-gray-100 dark:text-gray-100 transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
+                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
               >
-                <img src="images/icons/briefcase.svg" alt="Expériences" class="h-5 w-5 filter invert dark:invert" />
+                <img src="images/icons/briefcase.svg" alt="Expériences" class="h-5 w-5 dark:invert" />
                 <span>Expériences</span>
               </a>
               <a
                 href="#projects"
-                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium text-gray-100 dark:text-gray-100 transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
+                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
               >
-                <img src="images/icons/folder.svg" alt="Projets" class="h-5 w-5 filter invert dark:invert" />
+                <img src="images/icons/folder.svg" alt="Projets" class="h-5 w-5 dark:invert" />
                 <span>Projets</span>
               </a>
               <a
                 href="#downloads"
-                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium text-gray-100 dark:text-gray-100 transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
+                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
               >
-                <img src="images/icons/download.svg" alt="Téléchargements" class="h-5 w-5 filter invert dark:invert" />
+                <img src="images/icons/download.svg" alt="Téléchargements" class="h-5 w-5 dark:invert" />
                 <span>Téléchargements</span>
               </a>
               <a
                 href="#contact"
-                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium text-gray-100 dark:text-gray-100 transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
+                class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
               >
-                <img src="images/icons/contact.svg" alt="Contact" class="h-5 w-5 filter invert dark:invert" />
+                <img src="images/icons/contact.svg" alt="Contact" class="h-5 w-5 dark:invert" />
                 <span>Contact</span>
               </a>
             </div>
           </div>
           <div class="flex items-center space-x-4">
-            <!-- Dark mode toggle -->
+            <!-- Dark mode toggle with local icons -->
             <button
               id="themeToggle"
-              class="text-xl p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800"
-              aria-label="Toggle dark mode"
+              class="text-xl p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
+              aria-label="Basculer le thème"
             >
-              <i class="far fa-moon" id="themeIcon"></i>
+              <img src="images/icons/moon.svg" alt="Mode sombre" id="themeIcon" class="h-6 w-6 dark:hidden" />
+              <img src="images/icons/sun.svg" alt="Mode clair" id="themeIconAlt" class="h-6 w-6 hidden dark:inline" />
             </button>
             <!-- Mobile menu button -->
             <button
               id="mobileMenuButton"
-              class="md:hidden text-2xl p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800"
+              class="md:hidden text-xl p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700"
               aria-label="Menu"
             >
-              <i class="fas fa-bars"></i>
+              <img src="images/icons/menu.svg" alt="Menu" class="h-6 w-6 filter invert dark:invert" />
             </button>
           </div>
         </div>
@@ -148,41 +149,41 @@
       <!-- Mobile menu -->
       <div
         id="mobileMenu"
-        class="md:hidden mt-2 mx-3 px-4 pb-4 bg-gray-900/90 dark:bg-gray-800/90 backdrop-blur-lg rounded-xl shadow-lg ring-1 ring-purple-600/30"
+        class="md:hidden mt-2 mx-auto w-[90%] px-4 pb-4 bg-gray-900/90 dark:bg-gray-800/90 backdrop-blur-lg rounded-xl shadow-lg ring-1 ring-purple-600/30"
       >
         <a
           href="#home"
-          class="block px-3 py-2 rounded-lg text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400 transition-colors"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400"
           >Accueil</a
         >
         <a
           href="#about"
-          class="block px-3 py-2 rounded-lg text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400 transition-colors"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400"
           >À propos</a
         >
         <a
           href="#skills"
-          class="block px-3 py-2 rounded-lg text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400 transition-colors"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400"
           >Compétences</a
         >
         <a
           href="#experience"
-          class="block px-3 py-2 rounded-lg text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400 transition-colors"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400"
           >Expériences</a
         >
         <a
           href="#projects"
-          class="block px-3 py-2 rounded-lg text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400 transition-colors"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400"
           >Projets</a
         >
         <a
           href="#downloads"
-          class="block px-3 py-2 rounded-lg text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400 transition-colors"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400"
           >Téléchargements</a
         >
         <a
           href="#contact"
-          class="block px-3 py-2 rounded-lg text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400 transition-colors"
+          class="block px-3 py-2 rounded-md text-base font-medium text-gray-100 dark:text-gray-100 hover:bg-purple-600/20 hover:text-purple-400"
           >Contact</a
         >
       </div>
@@ -240,7 +241,7 @@
         </h2>
         <div class="prose dark:prose-invert max-w-none text-lg space-y-6 reveal">
           <p>
-        Développeur full stack confirmé avec plus de 7 ans d’expérience en
+        Développeur full stack confirmé avec plus de 4 ans d’expérience en
             interne chez LGM, je conçois et développe des applications
             logicielles robustes et innovantes. Expert en Python, C#, Angular,
             CI/CD et Docker, j’évolue aussi bien sur des architectures
@@ -924,27 +925,34 @@
           mobileMenu.style.display === 'block' ? 'none' : 'block';
       });
 
-      // Dark mode toggle
+      // Dark mode toggle with local icons
       const themeToggle = document.getElementById('themeToggle');
       const themeIcon = document.getElementById('themeIcon');
+      const themeIconAlt = document.getElementById('themeIconAlt');
       const root = document.documentElement;
       function setDarkMode(enabled) {
         if (enabled) {
           root.classList.add('dark');
-          themeIcon.classList.remove('fa-moon');
-          themeIcon.classList.add('fa-sun');
+          // Show sun icon and hide moon icon
+          themeIcon.classList.add('hidden');
+          themeIconAlt.classList.remove('hidden');
         } else {
           root.classList.remove('dark');
-          themeIcon.classList.add('fa-moon');
-          themeIcon.classList.remove('fa-sun');
+          // Show moon icon and hide sun icon
+          themeIcon.classList.remove('hidden');
+          themeIconAlt.classList.add('hidden');
         }
       }
-      // Initialize based on user preference
-      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      // Initialize dark mode based on localStorage or system preference
+      const prefersDark =
+        (localStorage.getItem('theme') === 'dark') ||
+        (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
       setDarkMode(prefersDark);
       themeToggle.addEventListener('click', () => {
         const isDark = root.classList.contains('dark');
         setDarkMode(!isDark);
+        // Persist the user's preference
+        localStorage.setItem('theme', !isDark ? 'dark' : 'light');
       });
 
       // Reveal animations using IntersectionObserver
