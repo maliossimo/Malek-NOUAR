@@ -29,6 +29,57 @@ body {
   letter-spacing: 1px;
 }
 
+/*
+ * Hero section animations
+ *
+ * To create a more engaging hero section, we define a set of keyframe animations
+ * and utility classes. These classes are applied to the avatar, the name and
+ * the tagline in the hero section so that they fade and slide into view when
+ * the page loads. The animations are subtle and respect the guidance around
+ * micro‑interactions: they enhance the experience without distracting the user
+ *【207828618469716†L44-L63】.  Each element has a slight delay to create a
+ * staggered effect.
+ */
+
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Avatar animation: fades in and scales up */
+.hero-avatar {
+  animation: fadeInScale 1s ease-out forwards;
+}
+
+/* Name animation: fades in and slides down */
+.hero-name {
+  animation: fadeSlideDown 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Tagline animation: fades in and slides down with a longer delay */
+.hero-tagline {
+  animation: fadeSlideDown 1s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
 /* Show a confirmation message when the page URL ends with #thanks.
    The thank‑you container is hidden by default but becomes visible when targeted. */
 #thanks {
