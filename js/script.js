@@ -253,8 +253,8 @@ function setLanguage(lang) {
   });
 }
 
-// Attach event listeners to language toggle buttons if they exist
-document.addEventListener('DOMContentLoaded', () => {
+// Attach event listeners to language toggle buttons and initialize language
+(() => {
   const langFrButton = document.getElementById('langFr');
   const langEnButton = document.getElementById('langEn');
   if (langFrButton) {
@@ -270,5 +270,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } catch (e) {
     storedLang = 'fr';
   }
+  // Call setLanguage immediately to update the UI
   setLanguage(storedLang);
-});
+})();
