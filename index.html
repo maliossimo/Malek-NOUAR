@@ -63,46 +63,49 @@
                 class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
               >
                 <img src="images/icons/home.svg" alt="Accueil" class="h-5 w-5 dark:invert" />
-                <span>Accueil</span>
+                <span data-i18n="nav.home">Accueil</span>
               </a>
               <a
                 href="#about"
                 class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
               >
                 <img src="images/icons/user.svg" alt="À propos" class="h-5 w-5 dark:invert" />
-                <span>À propos</span>
+                <span data-i18n="nav.about">À propos</span>
               </a>
               <a
                 href="#skills"
                 class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
               >
                 <img src="images/icons/code.svg" alt="Compétences" class="h-5 w-5 dark:invert" />
-                <span>Compétences</span>
+                <span data-i18n="nav.skills">Compétences</span>
               </a>
               <a
                 href="#experience"
                 class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
               >
                 <img src="images/icons/briefcase.svg" alt="Expériences" class="h-5 w-5 dark:invert" />
-                <span>Expériences</span>
+                <span data-i18n="nav.experience">Expériences</span>
               </a>
               <a
                 href="#projects"
                 class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
               >
                 <img src="images/icons/folder.svg" alt="Projets" class="h-5 w-5 dark:invert" />
-                <span>Projets</span>
+                <span data-i18n="nav.projects">Projets</span>
               </a>
               <a
                 href="#contact"
                 class="flex items-center space-x-2 px-4 py-2 rounded-full text-base font-medium transition-all duration-200 hover:bg-purple-600/20 hover:text-purple-400 hover:-translate-y-0.5"
               >
                 <img src="images/icons/contact.svg" alt="Contact" class="h-5 w-5 dark:invert" />
-                <span>Contact</span>
+                <span data-i18n="nav.contact">Contact</span>
               </a>
           </div>
           <div class="flex items-center space-x-4">
-            <!-- Space holder: no mobile nav icons here; bottom navigation is used on small screens -->
+            <!-- Language toggle buttons: switch between French (FR) and English (EN) -->
+            <button id="langFr" class="text-sm font-semibold text-gray-200 dark:text-gray-100 hover:text-purple-400 transition-colors">FR</button>
+            <span class="text-gray-500">|</span>
+            <button id="langEn" class="text-sm font-semibold text-gray-200 dark:text-gray-100 hover:text-purple-400 transition-colors">EN</button>
           </div>
         </div>
       </nav>
@@ -134,21 +137,24 @@
         <h1 class="text-5xl md:text-6xl font-extrabold mb-4 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
           Malek&nbsp;Nouar
         </h1>
-        <p class="text-xl md:text-2xl mb-8">
+        <p class="text-xl md:text-2xl mb-8" data-i18n="hero.tagline">
           Développeur passionné en <span class="text-blue-400">Python</span>,
           <span class="text-green-400">C#</span> et
           <span class="text-purple-400">Angular</span>
         </p>
         <div class="flex flex-wrap justify-center gap-4">
+          <!-- Add subtle micro‑interactions on buttons: on hover they lift slightly and on tap they depress. -->
           <a
             href="downloads/CV_Malek_Nouar_Premium.pdf"
-            class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-xl shadow-md transition"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-xl shadow-md transform transition-transform duration-200 hover:-translate-y-1 active:translate-y-0.5"
             download
+            data-i18n="cta.download"
             >Télécharger CV</a
           >
           <a
             href="#contact"
-            class="bg-transparent border border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 rounded-xl shadow-md transition"
+            class="bg-transparent border border-white text-white hover:bg-white hover:text-gray-900 px-6 py-3 rounded-xl shadow-md transform transition-transform duration-200 hover:-translate-y-1 active:translate-y-0.5"
+            data-i18n="cta.contact"
             >Me contacter</a
           >
         </div>
@@ -158,11 +164,11 @@
     <!-- About Section -->
     <section id="about" class="py-16 bg-white dark:bg-gray-800">
       <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center" data-i18n="about.heading">
           À propos
         </h2>
         <div class="prose dark:prose-invert max-w-none text-lg space-y-6 reveal">
-          <p>
+          <p data-i18n="about.paragraph1">
         Développeur full stack confirmé avec plus de 7 ans d’expérience en
             interne chez LGM, je conçois et développe des applications
             logicielles robustes et innovantes. Expert en Python, C#, Angular,
@@ -171,7 +177,7 @@
             environnements Agile et internationaux, je m’adapte rapidement et
             collabore efficacement avec des équipes pluridisciplinaires.
           </p>
-          <p>
+          <p data-i18n="about.paragraph2">
             Diplomé ingénieur en informatique de l’ENSIIE et titulaire d’une
             licence de mathématiques de Sorbonne Université, j’accorde
             une grande importance à la rigueur scientifique et à la qualité du
@@ -185,49 +191,49 @@
         </div>
         <div class="mt-8 flex flex-col md:flex-row justify-center gap-8 reveal">
           <div class="flex-1 bg-gray-50 dark:bg-gray-900 p-6 rounded-xl shadow-md">
-            <h3 class="text-xl font-semibold mb-4">
+            <h3 class="text-xl font-semibold mb-4" data-i18n="strengths.heading">
               Atouts principaux
             </h3>
             <ul class="space-y-3">
               <li class="flex items-start">
                 <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                <span>Expertise technique solide en Python, C#, Angular, CI/CD & Docker.</span>
+                <span data-i18n="strengths.item1">Expertise technique solide en Python, C#, Angular, CI/CD & Docker.</span>
               </li>
               <li class="flex items-start">
                 <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                <span>Adaptabilité et autonomie dans des contextes variés et internationaux.</span>
+                <span data-i18n="strengths.item2">Adaptabilité et autonomie dans des contextes variés et internationaux.</span>
               </li>
               <li class="flex items-start">
                 <i class="fas fa-check-circle text-blue-500 mr-3"></i>
-                <span>Expérience avérée dans la gestion de projets et le travail en équipe Agile.</span>
+                <span data-i18n="strengths.item3">Expérience avérée dans la gestion de projets et le travail en équipe Agile.</span>
               </li>
             </ul>
           </div>
           <div class="flex-1 bg-gray-50 dark:bg-gray-900 p-6 rounded-xl shadow-md">
-            <h3 class="text-xl font-semibold mb-4">Langues</h3>
-            <p class="mb-3">Français : courant</p>
-            <p class="mb-3">Anglais : professionnel (C1)</p>
-            <h3 class="text-xl font-semibold mt-6 mb-4">Soft skills</h3>
+            <h3 class="text-xl font-semibold mb-4" data-i18n="about.languages.heading">Langues</h3>
+            <p class="mb-3" data-i18n="about.languages.french">Français : courant</p>
+            <p class="mb-3" data-i18n="about.languages.english">Anglais : professionnel (C1)</p>
+            <h3 class="text-xl font-semibold mt-6 mb-4" data-i18n="about.softskills.heading">Soft skills</h3>
             <ul class="space-y-3">
               <li class="flex items-start">
                 <i class="fas fa-users text-green-500 mr-3"></i>
-                <span>Travail en équipe internationale</span>
+                <span data-i18n="about.softskills.item1">Travail en équipe internationale</span>
               </li>
               <li class="flex items-start">
                 <i class="fas fa-sync-alt text-green-500 mr-3"></i>
-                <span>Adaptabilité et autonomie</span>
+                <span data-i18n="about.softskills.item2">Adaptabilité et autonomie</span>
               </li>
               <li class="flex items-start">
                 <i class="fas fa-bullseye text-green-500 mr-3"></i>
-                <span>Orientation résultats</span>
+                <span data-i18n="about.softskills.item3">Orientation résultats</span>
               </li>
               <li class="flex items-start">
                 <i class="fas fa-comments text-green-500 mr-3"></i>
-                <span>Communication claire</span>
+                <span data-i18n="about.softskills.item4">Communication claire</span>
               </li>
               <li class="flex items-start">
                 <i class="fas fa-brain text-green-500 mr-3"></i>
-                <span>Esprit analytique</span>
+                <span data-i18n="about.softskills.item5">Esprit analytique</span>
               </li>
             </ul>
           </div>
@@ -238,14 +244,14 @@
     <!-- Skills Section -->
     <section id="skills" class="py-16 bg-gray-100 dark:bg-gray-800">
       <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center" data-i18n="skills.heading">
           Compétences
         </h2>
         <div class="grid md:grid-cols-2 gap-8 reveal">
           <!-- Frontend -->
           <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md">
             <h3 class="text-xl font-semibold mb-4 flex items-center">
-              <i class="fas fa-laptop-code text-purple-500 mr-3"></i>Frontend
+              <i class="fas fa-laptop-code text-purple-500 mr-3"></i><span data-i18n="skills.frontend">Frontend</span>
             </h3>
             <div class="flex flex-wrap gap-3">
               <span class="inline-flex items-center px-3 py-1 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-300 rounded-full text-sm">
@@ -268,7 +274,7 @@
           <!-- Backend -->
           <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md">
             <h3 class="text-xl font-semibold mb-4 flex items-center">
-              <i class="fas fa-server text-blue-500 mr-3"></i>Backend
+              <i class="fas fa-server text-blue-500 mr-3"></i><span data-i18n="skills.backend">Backend</span>
             </h3>
             <div class="flex flex-wrap gap-3">
               <span class="inline-flex items-center px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-300 rounded-full text-sm">
@@ -291,7 +297,7 @@
           <!-- Databases -->
           <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md">
             <h3 class="text-xl font-semibold mb-4 flex items-center">
-              <i class="fas fa-database text-green-500 mr-3"></i>Bases de données
+              <i class="fas fa-database text-green-500 mr-3"></i><span data-i18n="skills.databases">Bases de données</span>
             </h3>
             <div class="flex flex-wrap gap-3">
               <span class="inline-flex items-center px-3 py-1 bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-300 rounded-full text-sm">
@@ -308,7 +314,7 @@
           <!-- DevOps & Tools -->
           <div class="p-6 bg-white dark:bg-gray-900 rounded-xl shadow-md">
             <h3 class="text-xl font-semibold mb-4 flex items-center">
-              <i class="fas fa-tools text-yellow-500 mr-3"></i>DevOps & Outils
+              <i class="fas fa-tools text-yellow-500 mr-3"></i><span data-i18n="skills.devops">DevOps & Outils</span>
             </h3>
             <div class="flex flex-wrap gap-3">
               <span class="inline-flex items-center px-3 py-1 bg-yellow-100 dark:bg-yellow-900/50 text-yellow-700 dark:text-yellow-300 rounded-full text-sm">
@@ -329,7 +335,7 @@
     <!-- Experience Section -->
     <section id="experience" class="py-16 bg-white dark:bg-gray-800">
       <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center" data-i18n="experience.heading">
           Expériences
         </h2>
         <!-- Timeline -->
@@ -343,10 +349,10 @@
               SNCF Réseau
             </h3>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2020 – 2022</p>
-            <p class="mb-1">
+            <p class="mb-1" data-i18n="experience.item1.desc">
               Développement d’un outil temps réel pour la mise en protection des caténaires : Angular/.NET/Docker, microservices, base de données PostgreSQL temps réel.
             </p>
-            <p class="text-sm italic">Impact : sécurisation et suivi en temps réel.</p>
+            <p class="text-sm italic" data-i18n="experience.item1.impact">Impact : sécurisation et suivi en temps réel.</p>
           </div>
           <div class="mb-10">
             <div class="absolute -left-4 top-0 bg-blue-500 w-3 h-3 rounded-full"></div>
@@ -356,10 +362,10 @@
               Projet SPLIT
             </h3>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2022</p>
-            <p class="mb-1">
+            <p class="mb-1" data-i18n="experience.item2.desc">
               Conception d’un outil interne de gestion multi‑sites : full stack Python/Angular/PostgreSQL avec pipelines CI/CD GitLab.
             </p>
-            <p class="text-sm italic">Impact : collaboration renforcée et pilotage optimisé.</p>
+            <p class="text-sm italic" data-i18n="experience.item2.impact">Impact : collaboration renforcée et pilotage optimisé.</p>
           </div>
           <div class="mb-10">
             <div class="absolute -left-4 top-0 bg-blue-500 w-3 h-3 rounded-full"></div>
@@ -369,10 +375,10 @@
               Projet APIVUT
             </h3>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2022 – 2023</p>
-            <p class="mb-1">
+            <p class="mb-1" data-i18n="experience.item3.desc">
               Développement d’API pour l’interconnexion de systèmes industriels : Python (FastAPI), OpenAPI, CI/CD.
             </p>
-            <p class="text-sm italic">Impact : automatisation des échanges de données et réduction des erreurs.</p>
+            <p class="text-sm italic" data-i18n="experience.item3.impact">Impact : automatisation des échanges de données et réduction des erreurs.</p>
           </div>
           <div class="mb-10">
             <div class="absolute -left-4 top-0 bg-blue-500 w-3 h-3 rounded-full"></div>
@@ -382,10 +388,10 @@
               Alstom
             </h3>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2023 – présent</p>
-            <p class="mb-1">
+            <p class="mb-1" data-i18n="experience.item4.desc">
               Digitalisation de la maintenance du matériel roulant au Royaume‑Uni, en Roumanie et en Inde : algorithme d’optimisation et interface C#/WPF.
             </p>
-            <p class="text-sm italic">Impact : réduction des immobilisations et déploiement industriel.</p>
+            <p class="text-sm italic" data-i18n="experience.item4.impact">Impact : réduction des immobilisations et déploiement industriel.</p>
           </div>
           <div class="mb-10">
             <div class="absolute -left-4 top-0 bg-blue-500 w-3 h-3 rounded-full"></div>
@@ -395,10 +401,10 @@
               Safran Aircraft Engines
             </h3>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2024 – présent</p>
-            <p class="mb-1">
+            <p class="mb-1" data-i18n="experience.item5.desc">
               Outil de suivi de configuration numérique CATIA en Python/Qt/PostgreSQL avec pipelines CI/CD et tests unitaires.
             </p>
-            <p class="text-sm italic">Impact : validation numérique accélérée et fiabilisée.</p>
+            <p class="text-sm italic" data-i18n="experience.item5.impact">Impact : validation numérique accélérée et fiabilisée.</p>
           </div>
           <div class="mb-10">
             <div class="absolute -left-4 top-0 bg-blue-500 w-3 h-3 rounded-full"></div>
@@ -408,10 +414,10 @@
               Altrad Endel
             </h3>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2024 – 2025</p>
-            <p class="mb-1">
+            <p class="mb-1" data-i18n="experience.item6.desc">
               Automatisation de la migration de données GMAO via des scripts Python/Excel.
             </p>
-            <p class="text-sm italic">Impact : fiabilisation des flux et gain de temps.</p>
+            <p class="text-sm italic" data-i18n="experience.item6.impact">Impact : fiabilisation des flux et gain de temps.</p>
           </div>
           <div class="mb-0">
             <div class="absolute -left-4 top-0 bg-blue-500 w-3 h-3 rounded-full"></div>
@@ -421,10 +427,10 @@
               SVR Cosmétique
             </h3>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">2024</p>
-            <p class="mb-1">
+            <p class="mb-1" data-i18n="experience.item7.desc">
               Applications de gestion du packaging et réglementaire : Angular 15 / ASP.NET / PostgreSQL.
             </p>
-            <p class="text-sm italic">Impact : amélioration du suivi réglementaire et du cycle packaging.</p>
+            <p class="text-sm italic" data-i18n="experience.item7.impact">Impact : amélioration du suivi réglementaire et du cycle packaging.</p>
           </div>
         </div>
       </div>
@@ -433,7 +439,7 @@
     <!-- Projects Section -->
     <section id="projects" class="py-16 bg-gray-100 dark:bg-gray-800">
       <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center" data-i18n="projects.heading">
           Projets
         </h2>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -454,7 +460,7 @@
                 <img src="images/logos/sncf.svg" alt="Logo SNCF" class="h-5 w-auto mr-2 dark:invert" />
                 SNCF Réseau
               </h3>
-              <p class="mb-4 text-sm">
+              <p class="mb-4 text-sm" data-i18n="projects.item1.desc">
                 Outil temps réel pour la mise en protection des caténaires.
               </p>
               <!-- Liens GitHub/Démo supprimés car non disponibles -->
@@ -476,9 +482,9 @@
               <h3 class="text-lg font-semibold mb-2 flex items-center">
                 <!-- Oc’Via Maintenance is the client for SPLIT; using a train icon as a visual cue -->
                 <img src="images/icons/train.svg" alt="Oc’Via Maintenance" class="h-5 w-auto mr-2 dark:invert" />
-                Projet SPLIT
+                <span data-i18n="projects.item2.title">Projet SPLIT</span>
               </h3>
-              <p class="mb-4 text-sm">
+              <p class="mb-4 text-sm" data-i18n="projects.item2.desc">
                 Outil interne de gestion multi‑sites.
               </p>
               <!-- Liens GitHub/Démo supprimés car non disponibles -->
@@ -500,9 +506,9 @@
               <h3 class="text-lg font-semibold mb-2 flex items-center">
                 <!-- APIVUT est un projet pour SNCF, on réutilise le logo SNCF -->
                 <img src="images/logos/sncf.svg" alt="Logo SNCF" class="h-5 w-auto mr-2 dark:invert" />
-                Projet APIVUT
+                <span data-i18n="projects.item3.title">Projet APIVUT</span>
               </h3>
-              <p class="mb-4 text-sm">
+              <p class="mb-4 text-sm" data-i18n="projects.item3.desc">
                 APIs industrielles & interconnexion de systèmes.
               </p>
               <!-- Liens GitHub/Démo supprimés car non disponibles -->
@@ -525,7 +531,7 @@
                 <img src="images/logos/alstom.png" alt="Logo Alstom" class="h-5 w-auto mr-2 dark:invert" />
                 Alstom
               </h3>
-              <p class="mb-4 text-sm">
+              <p class="mb-4 text-sm" data-i18n="projects.item4.desc">
                 Digitalisation de la maintenance du matériel roulant.
               </p>
               <!-- Liens GitHub/Démo supprimés car non disponibles -->
@@ -548,7 +554,7 @@
                 <img src="images/logos/safran.png" alt="Logo Safran" class="h-5 w-auto mr-2 dark:invert" />
                 Safran Aircraft Engines
               </h3>
-              <p class="mb-4 text-sm">
+              <p class="mb-4 text-sm" data-i18n="projects.item5.desc">
                 Suivi de configuration numérique CATIA.
               </p>
               <!-- Liens GitHub/Démo supprimés car non disponibles -->
@@ -572,7 +578,7 @@
                 <img src="images/logos/altrad_endel.png" alt="Logo Altrad Endel" class="h-6 w-auto mr-2 dark:invert object-contain" />
                 Altrad Endel
               </h3>
-              <p class="mb-4 text-sm">
+              <p class="mb-4 text-sm" data-i18n="projects.item6.desc">
                 Scripts Python/Excel pour migration de données GMAO.
               </p>
               <!-- Liens GitHub/Démo supprimés car non disponibles -->
@@ -596,7 +602,7 @@
                 <img src="images/icons/flask.svg" alt="Laboratoire SVR" class="h-5 w-auto mr-2 dark:invert" />
                 SVR Cosmétique
               </h3>
-              <p class="mb-4 text-sm">
+              <p class="mb-4 text-sm" data-i18n="projects.item7.desc">
                 Applications packaging & réglementaire.
               </p>
               <!-- Liens GitHub/Démo supprimés car non disponibles -->
@@ -609,15 +615,15 @@
     <!-- Downloads Section -->
     <section id="downloads" class="py-16 bg-white dark:bg-gray-800">
       <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center" data-i18n="downloads.heading">
           Téléchargements
         </h2>
         <div class="grid md:grid-cols-1 gap-8 reveal">
           <!-- Section de téléchargement réduite pour se concentrer sur l'essentiel -->
           <div class="bg-gray-50 dark:bg-gray-900 p-8 rounded-xl shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300">
             <i class="far fa-file-pdf text-red-500 text-6xl mb-4"></i>
-            <h3 class="text-2xl font-semibold mb-2">Curriculum Vitae</h3>
-            <p class="mb-6 text-sm max-w-sm">
+            <h3 class="text-2xl font-semibold mb-2" data-i18n="downloads.cvTitle">Curriculum Vitae</h3>
+            <p class="mb-6 text-sm max-w-sm" data-i18n="downloads.cvDescription">
               Téléchargez mon CV détaillé, présentant mon parcours professionnel,
               mes compétences et mes réalisations clés.
             </p>
@@ -625,6 +631,7 @@
               href="downloads/CV_Malek_Nouar_Premium.pdf"
               download
               class="bg-red-500 hover:bg-red-600 text-white px-6 py-3 rounded-full font-medium transition-transform duration-200 transform hover:-translate-y-1"
+              data-i18n="downloads.cvButton"
               >Télécharger le CV</a
             >
           </div>
@@ -635,7 +642,7 @@
     <!-- Technologies & Clients Section -->
     <section id="logos" class="py-16 bg-white dark:bg-gray-900">
       <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center" data-i18n="logos.heading">
           Technologies &amp; Clients
         </h2>
         <!-- Technology icons row -->
@@ -675,15 +682,15 @@
     <!-- Qualités Section -->
     <section id="qualites" class="py-16 bg-gray-50 dark:bg-gray-900">
       <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center" data-i18n="why.heading">
           Pourquoi me choisir ?
         </h2>
         <div class="grid md:grid-cols-3 gap-8 reveal">
           <!-- Fiabilité & Qualité -->
           <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
             <img src="images/icons/shield.svg" alt="Fiabilité" class="h-12 w-12 mb-4 dark:invert" />
-            <h3 class="text-xl font-semibold mb-3">Fiabilité &amp; Qualité</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-300">
+            <h3 class="text-xl font-semibold mb-3" data-i18n="why.card1.title">Fiabilité &amp; Qualité</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300" data-i18n="why.card1.desc">
               Code robuste, tests rigoureux et respect des meilleures pratiques assurent
               des solutions pérennes et sécurisées.
             </p>
@@ -691,8 +698,8 @@
           <!-- Innovation & Créativité -->
           <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
             <img src="images/icons/lightbulb.svg" alt="Innovation" class="h-12 w-12 mb-4 dark:invert" />
-            <h3 class="text-xl font-semibold mb-3">Innovation &amp; Créativité</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-300">
+            <h3 class="text-xl font-semibold mb-3" data-i18n="why.card2.title">Innovation &amp; Créativité</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300" data-i18n="why.card2.desc">
               Toujours en veille technologique, j’apporte des idées nouvelles et des
               solutions adaptées aux enjeux de demain.
             </p>
@@ -700,8 +707,8 @@
           <!-- Collaboration & Communication -->
           <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-center text-center">
             <img src="images/icons/users.svg" alt="Collaboration" class="h-12 w-12 mb-4 dark:invert" />
-            <h3 class="text-xl font-semibold mb-3">Collaboration &amp; Écoute</h3>
-            <p class="text-sm text-gray-600 dark:text-gray-300">
+            <h3 class="text-xl font-semibold mb-3" data-i18n="why.card3.title">Collaboration &amp; Écoute</h3>
+            <p class="text-sm text-gray-600 dark:text-gray-300" data-i18n="why.card3.desc">
               Communication claire et travail d’équipe sont au cœur de ma démarche pour
               garantir la réussite des projets.
             </p>
@@ -713,12 +720,12 @@
     <!-- Contact Section -->
     <section id="contact" class="py-16 bg-gray-100 dark:bg-gray-800">
       <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center" data-i18n="contact.heading">
           Contact
         </h2>
         <!-- Thank‑you message (hidden by default). When the URL ends with #thanks this div becomes visible -->
         <div id="thanks" class="text-center mb-8">
-          <p class="inline-block bg-green-600 text-white px-6 py-3 rounded-md shadow-md">
+          <p class="inline-block bg-green-600 text-white px-6 py-3 rounded-md shadow-md" data-i18n="contact.thanks">
             Merci ! Votre message a bien été envoyé.
           </p>
         </div>
@@ -742,6 +749,7 @@
               <input type="hidden" name="_next" value="https://maliossimo.github.io/Malek-NOUAR/#thanks" />
               <div>
                 <label for="name" class="block text-sm font-medium mb-1"
+                  data-i18n="contact.nameLabel"
                   >Nom</label
                 >
                 <input
@@ -754,6 +762,7 @@
               </div>
               <div>
                 <label for="email" class="block text-sm font-medium mb-1"
+                  data-i18n="contact.emailLabel"
                   >Email</label
                 >
                 <input
@@ -768,6 +777,7 @@
                 <label
                   for="message"
                   class="block text-sm font-medium mb-1"
+                  data-i18n="contact.messageLabel"
                   >Message</label
                 >
                 <textarea
@@ -780,16 +790,16 @@
               </div>
               <button
                 type="submit"
-                class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md shadow-md"
+                class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md shadow-md transform transition-transform duration-200 hover:-translate-y-1 active:translate-y-0.5"
+                data-i18n="contact.sendButton"
               >
                 Envoyer
               </button>
             </form>
           </div>
           <div class="flex flex-col justify-center space-y-4">
-            <p class="text-lg">
-              Vous pouvez également me trouver sur les réseaux sociaux ou m’envoyer
-              directement un email.
+            <p class="text-lg" data-i18n="contact.socialParagraph">
+              Vous pouvez également me trouver sur les réseaux sociaux ou m’envoyer directement un email.
             </p>
             <div class="flex space-x-6 text-2xl">
               <a
@@ -857,27 +867,27 @@
     <nav class="fixed bottom-0 left-0 right-0 z-50 bg-gray-900/90 dark:bg-gray-800/90 backdrop-blur-lg md:hidden flex justify-around items-center py-2">
       <a href="#home" class="flex flex-col items-center text-gray-300 dark:text-gray-200 hover:text-purple-400 transition">
         <img src="images/icons/home.svg" alt="Accueil" class="h-5 w-5 dark:invert" />
-        <span class="text-xs mt-0.5">Accueil</span>
+        <span class="text-xs mt-0.5" data-i18n="nav.home">Accueil</span>
       </a>
       <a href="#about" class="flex flex-col items-center text-gray-300 dark:text-gray-200 hover:text-purple-400 transition">
         <img src="images/icons/user.svg" alt="À propos" class="h-5 w-5 dark:invert" />
-        <span class="text-xs mt-0.5">À&nbsp;propos</span>
+        <span class="text-xs mt-0.5" data-i18n="nav.about">À&nbsp;propos</span>
       </a>
       <a href="#skills" class="flex flex-col items-center text-gray-300 dark:text-gray-200 hover:text-purple-400 transition">
         <img src="images/icons/code.svg" alt="Compétences" class="h-5 w-5 dark:invert" />
-        <span class="text-xs mt-0.5">Compétences</span>
+        <span class="text-xs mt-0.5" data-i18n="nav.skills">Compétences</span>
       </a>
       <a href="#experience" class="flex flex-col items-center text-gray-300 dark:text-gray-200 hover:text-purple-400 transition">
         <img src="images/icons/briefcase.svg" alt="Expériences" class="h-5 w-5 dark:invert" />
-        <span class="text-xs mt-0.5">Expériences</span>
+        <span class="text-xs mt-0.5" data-i18n="nav.experience">Expériences</span>
       </a>
       <a href="#projects" class="flex flex-col items-center text-gray-300 dark:text-gray-200 hover:text-purple-400 transition">
         <img src="images/icons/folder.svg" alt="Projets" class="h-5 w-5 dark:invert" />
-        <span class="text-xs mt-0.5">Projets</span>
+        <span class="text-xs mt-0.5" data-i18n="nav.projects">Projets</span>
       </a>
       <a href="#contact" class="flex flex-col items-center text-gray-300 dark:text-gray-200 hover:text-purple-400 transition">
         <img src="images/icons/contact.svg" alt="Contact" class="h-5 w-5 dark:invert" />
-        <span class="text-xs mt-0.5">Contact</span>
+        <span class="text-xs mt-0.5" data-i18n="nav.contact">Contact</span>
       </a>
     </nav>
 
